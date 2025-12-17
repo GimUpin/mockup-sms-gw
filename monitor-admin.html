@@ -162,6 +162,100 @@
     </div>
   </div>
 
+  <!-- 7. Alert Configuration -->
+  <div class="section">
+    <h2>7) Alert Configuration (Admin only)</h2>
+    <div class="card">
+      <div style="font-size:12px;color:#6b7280;margin-bottom:8px;">
+        Chỉ dành cho ROLE_ADMIN. Các giá trị ở đây sẽ ảnh hưởng trực tiếp tới logic alert trong hệ thống.
+      </div>
+
+      <!-- Vendor Success / Failure -->
+      <h3>Vendor Success / Failure</h3>
+      <div class="row">
+        <div class="col">
+          <label style="font-size:12px;">Success Rate Warning (%)</label><br/>
+          <input value="95" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Success Rate Critical (%)</label><br/>
+          <input value="90" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Failure Rate Warning (%)</label><br/>
+          <input value="10" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Failure Rate Critical (%)</label><br/>
+          <input value="30" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Min Total Requests for Alert</label><br/>
+          <input value="300" />
+        </div>
+      </div>
+
+      <!-- VendorRef Monthly Usage -->
+      <h3 style="margin-top:16px;">VendorRef Monthly Usage</h3>
+      <div class="row">
+        <div class="col">
+          <label style="font-size:12px;">Usage Warning Mid (%)</label><br/>
+          <input value="80" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Usage Critical End (%)</label><br/>
+          <input value="95" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Usage High Warning 90% (%)</label><br/>
+          <input value="90" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Day Request Quota Mid</label><br/>
+          <input value="20" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Day Request Quota End</label><br/>
+          <input value="25" />
+        </div>
+      </div>
+
+      <!-- Subscription -->
+      <h3 style="margin-top:16px;">Subscription (Quota & Expiration)</h3>
+      <div class="row">
+        <div class="col">
+          <label style="font-size:12px;">Subscription Quota Warning (%)</label><br/>
+          <input value="80" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Subscription Expiration Warning Days</label><br/>
+          <input value="7" />
+        </div>
+      </div>
+
+      <!-- Reminder Limits -->
+      <h3 style="margin-top:16px;">Reminder Limits (per Merchant / Day)</h3>
+      <div class="row">
+        <div class="col">
+          <label style="font-size:12px;">Max Email Alerts</label><br/>
+          <input value="3" />
+        </div>
+        <div class="col">
+          <label style="font-size:12px;">Max Slack Alerts</label><br/>
+          <input value="5" />
+        </div>
+      </div>
+
+      <div style="margin-top:16px;">
+        <button class="btn primary">Save</button>
+        <button class="btn">Cancel</button>
+        <span style="font-size:12px;color:#6b7280;margin-left:8px;">
+          * Mockup: bản thật sẽ POST/PUT tới API cấu hình alert và reload cache cấu hình.
+        </span>
+      </div>
+    </div>
+  </div>
+
   <!-- 3. Subscription Monitor -->
   <div class="section">
     <h2>3) Subscription Monitor (Quota & Expiration)</h2>
